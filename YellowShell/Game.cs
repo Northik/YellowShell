@@ -121,7 +121,6 @@ namespace YellowShell
             switch (gameState)
             {
                 case GameState.MainTitle:
-                    camera.SetFocalPoint(new Vector2(0,0), new Vector2(graphics.GraphicsDevice.Viewport.Bounds.X, graphics.GraphicsDevice.Viewport.Bounds.Y), graphics.GraphicsDevice.Viewport.Bounds);
                     UpdateMainMenu(Keyboard.GetState());
                     break;
                 case GameState.LevelEditor:
@@ -184,11 +183,12 @@ namespace YellowShell
         {
             gameState = newState;
             IsMouseVisible = gameState == GameState.MainTitle || gameState == GameState.LevelEditor;
+
         }
 
         private void DrawMainMenu()
         {
-            DrawShadowedString(m_hudFont, "Press 'P' to play", new Vector2(10, 10), Color.Red);
+            DrawShadowedString(m_hudFont, "Press 'P' to play", new Vector2(10, 100), Color.Red);
             DrawShadowedString(m_hudFont, "Press 'E' to create a level", new Vector2(10, 50), Color.Red);
 
         }

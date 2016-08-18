@@ -135,8 +135,10 @@ namespace YellowShell.Editor
                 {
                     Point tileClicked = new Point(mousePosition.X / TileEditor.WIDTH, (mousePosition.Y - 100) / TileEditor.HEIGHT);
 
-                    m_tiles[tileClicked.X, tileClicked.Y].SetObject(ObjectType.Empty);
-
+                    if (tileClicked.X >= 0 && tileClicked.X < MAP_WIDTH && tileClicked.Y >= 0 && tileClicked.Y < MAP_HEIGTH)
+                    {
+                        m_tiles[tileClicked.X, tileClicked.Y].SetObject(ObjectType.Empty);
+                    }
                 }
             }
 

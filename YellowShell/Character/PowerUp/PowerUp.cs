@@ -35,6 +35,7 @@ namespace YellowShell.Character.PowerUp
             m_powerUpType = type;
 
             LoadContent();
+            m_animationManager.PlayAnimation(m_sprite);
         }
 
         /// <summary>
@@ -48,7 +49,6 @@ namespace YellowShell.Character.PowerUp
 
         public void Update(GameTime gameTime)
         {
-            m_animationManager.PlayAnimation(m_sprite);
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)

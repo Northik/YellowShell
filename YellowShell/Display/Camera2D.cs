@@ -35,7 +35,7 @@ namespace YellowShell.Display
         {
             var temp = m_position;
             m_position = new Vector2(focalPosition.X - viewportBound.Width / 2, focalPosition.Y - viewportBound.Height / 2);    
-            m_position = new Vector2(focalPosition.X - temp.X, focalPosition.Y);
+            //m_position = new Vector2(focalPosition.X - temp.X, focalPosition.Y);
 
             if (m_position.X < 0)
                 m_position.X = 0;

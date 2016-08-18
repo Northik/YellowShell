@@ -42,6 +42,7 @@ namespace YellowShell.Level
             m_doorLevel = doorLevel;
 
             LoadContent();
+            m_sprite.PlayAnimation(m_doorClosed);
         }
 
         /// <summary>
@@ -60,10 +61,6 @@ namespace YellowShell.Level
             if(IsOpen)
             {
                 m_sprite.PlayAnimation(m_doorOppenning);
-            }
-            else
-            {
-                m_sprite.PlayAnimation(m_doorClosed);
             }
         }
 
